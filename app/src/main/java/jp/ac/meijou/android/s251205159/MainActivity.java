@@ -43,11 +43,7 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 binding.textview1.setText("知らない画像です");
                 binding.imageView3.setImageResource(R.drawable.ic_launcher_foreground);
-            }
-        });
-        // 保存済みの名前があれば読み込んで表示
-        dataStore.getString("name")
-                .ifPresent(name -> binding.item12.setText(name));
+            }        });
 
         setOnClickListener();
     }
@@ -62,8 +58,17 @@ public class MainActivity extends AppCompatActivity {
         // Saveボタン: EditTextの内容をitem12に反映し、データストアに保存する
         binding.save1.setOnClickListener(view -> {
             var text = binding.name1.getText().toString();
-            binding.item12.setText(text);
-            dataStore.setString("name", text);
+            if ("a".equals(text)) {
+                binding.textview1.setText("Aの画像です");
+                binding.imageView3.setImageResource(R.drawable.baseline_drive_eta_24);
+            } else if ("b".equals(text)) {
+                binding.textview1.setText("Bの画像です");
+                binding.imageView3.setImageResource(R.drawable.ic_launcher_background);
+            } else {
+                binding.textview1.setText("知らない画像です");
+                binding.imageView3.setImageResource(R.drawable.ic_launcher_foreground);
+            }
+            dataStore.setString("text", text);
         });
     }
 
