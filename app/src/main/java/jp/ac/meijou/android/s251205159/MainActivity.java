@@ -15,13 +15,10 @@ import jp.ac.meijou.android.s251205159.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
-
     private PrefDataStore dataStore;
+
     /**
-     * アクティビティが最初に作されるときに呼び出されるメソッド。
-     * 画面のレイアウト設定や、UI要素の初期化などのセットアップを行います。
-     *
-     * @param savedInstanceState 以前に保存された状態データ（存在する場合のみ非null）
+     * @param savedInstanceState 以前に保存された状態データ
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         text.setText("よろしくお願いします");
         binding.item12.setText("こんにちは");
         binding.change1.setOnClickListener(view -> {
-            binding.change1.setText("はーい！");
+            binding.save1.setText("はーい！");
         });
         setOnClickListener();
         }
@@ -82,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 dataStore.setString("name", text);
             });
         }
+
     @Override
     protected void onStart() {
         super.onStart();

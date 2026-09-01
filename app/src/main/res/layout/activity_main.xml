@@ -32,6 +32,28 @@
         app:layout_constraintVertical_bias="0.574"
         app:srcCompat="@drawable/baseline_drive_eta_24" />
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="123dp"
+        android:layout_height="142dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@id/item_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.574"
+        app:srcCompat="@drawable/ic_launcher_background" />
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="123dp"
+        android:layout_height="142dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@id/item_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.574"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
     <Button
         android:id="@+id/change_1"
         android:layout_width="112dp"
@@ -81,7 +103,6 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="332dp"
         android:layout_marginEnd="32dp"
-        android:text="赤い車です"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.698"
