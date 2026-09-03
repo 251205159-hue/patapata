@@ -34,13 +34,6 @@ public class MainActivity6 extends AppCompatActivity {
             return insets;
         });
         connectivityManager = getSystemService(ConnectivityManager.class);
-
-        updateAll();
-
-        // ボタン押下で再取得・更新
-        binding.updatebutton.setOnClickListener(v -> updateAll());
-    }
-    private void updateAll() {
         var currentNetwork = connectivityManager.getActiveNetwork();
         updateTransport(currentNetwork);
         updateIpAddress(currentNetwork);
@@ -82,6 +75,9 @@ public class MainActivity6 extends AppCompatActivity {
         }
     }
 
+    /**
+     * ネットワークイベントを取得するCallbackを登録する
+     */
     private void registerNetworkCallback() {
         connectivityManager.registerDefaultNetworkCallback(new ConnectivityManager.NetworkCallback() {
             @Override
